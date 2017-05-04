@@ -5,16 +5,17 @@ import {
 
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+    selector: 'app-root',
+    templateUrl: './app.component.html',
+    styleUrls: ['./app.component.css']
 })
-export class AppComponent implements  OnInit {
+export class AppComponent implements OnInit {
     title = 'Angular cli Example SystemJsNgModuleLoader.load';
 
-    @ViewChild('container', { read: ViewContainerRef }) container: ViewContainerRef;
+    @ViewChild('container', {read: ViewContainerRef}) container: ViewContainerRef;
 
-    constructor(private loader: SystemJsNgModuleLoader, private inj: Injector) {}
+    constructor(private loader: SystemJsNgModuleLoader, private inj: Injector) {
+    }
 
     ngOnInit() {
         this.loader.load('app/lazy/lazy.module#LazyModule').then((moduleFactory: NgModuleFactory<any>) => {

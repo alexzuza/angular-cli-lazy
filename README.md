@@ -1,6 +1,6 @@
 # AngularCliLazy
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.0.
+This project shows how to manually lazy load module in angular-cli application
 
 ## Development server
 
